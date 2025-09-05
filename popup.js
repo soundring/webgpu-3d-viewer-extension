@@ -1,10 +1,15 @@
-// Listener for the popup button to open the viewer page in a new tab.
+// Listener for the popup buttons to open viewer or visualization pages
 document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('openViewer');
-  if (btn) {
-    btn.addEventListener('click', () => {
-      // Open viewer.html in a new tab
+  const viewerBtn = document.getElementById('openViewer');
+  if (viewerBtn) {
+    viewerBtn.addEventListener('click', () => {
       chrome.tabs.create({ url: chrome.runtime.getURL('viewer.html') });
+    });
+  }
+  const vizBtn = document.getElementById('openViz');
+  if (vizBtn) {
+    vizBtn.addEventListener('click', () => {
+   chrome.tabs.create({ url: chrome.runtime.getURL('visualiz' + 'ation.html') });
     });
   }
 });
