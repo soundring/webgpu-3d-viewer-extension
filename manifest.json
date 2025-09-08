@@ -1,9 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "WebGPU 3D Viewer",
-  "version": "1.1",
-  "description": "View simple 3D scenes using the power of WebGPU or visualize real-time data in 3D.",
-  "permissions": ["storage"],
+  "name": "WebGPU 3D viewer",
+  "version": "1.2",
+  "description": "View simple 3D scenes using the power of WebGPU or visualize real-time data in 3D. ",
   "action": {
     "default_popup": "popup.html",
     "default_title": "WebGPU Tools"
@@ -14,14 +13,7 @@
     "48": "icons/icon_48.png",
     "128": "icons/icon_128.png"
   },
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "viewer.html",
-        "visualization.html",
-        "icons/icon_128.png"
-      ],
-      "matches": ["<all_urls>"]
-    }
+  "host_permissions": [
+    "https://api.coindesk.com/*"
   ]
 }
